@@ -1,6 +1,5 @@
 PlotTransitionNetwork <-
 function(Q, main="", layout.fn = layout.circle, ...) {
-	require(igraph)
 	diag(Q) <- 0
 	Q<-Q/max(Q)
 	g <- graph.adjacency(Q, weighted=TRUE, mode="directed")

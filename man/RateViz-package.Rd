@@ -16,7 +16,6 @@ Version: \tab 1.0\cr
 Date: \tab 2015-02-17\cr
 License: \tab GPL (>=2)\cr
 }
-~~ An overview of how to use the package, including the most important functions ~~
 }
 \author{
 Brian C. O'Meara and Jeremy M. Beaulieu
@@ -33,7 +32,6 @@ diag(Q) <- -rowSums(Q)
 colnames(Q) <- c("A", "B", "C")
 rownames(Q) <- c("A", "B", "C")
 print(Q)
-ComputePathwayProbability(Q)
+ComputePathwayProbability(Q, from=1, to=3)
 PlotTransitionNetwork(Q)
-
 }

@@ -9,7 +9,7 @@ This plots a network showing transition rates between given states. It uses igra
 \usage{
 PlotTransitionNetwork(Q, main = "", layout.fn = layout.circle, ...)
 }
-\\arguments{
+\arguments{
   \item{Q}{
 Instantaneous rate matrix
 }
@@ -23,7 +23,7 @@ Other arguments to pass to plot.igraph()}
 }
 
 \value{
-Nothing is returned. Except beauty.
+No return
 }
 \author{
 Brian C. O'Meara
@@ -41,3 +41,4 @@ colnames(Q) <- c("A", "B", "C")
 rownames(Q) <- c("A", "B", "C")
 print(Q)
 PlotTransitionNetwork(Q)
+}

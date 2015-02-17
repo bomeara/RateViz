@@ -10,46 +10,31 @@ ComputePathwayProbability(Q, from, to, correct.diag = TRUE, total.time = 1e+06)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{Q}{
-%%     ~~Describe \code{Q} here~~
+Instantaneous rate matrix
 }
   \item{from}{
-%%     ~~Describe \code{from} here~~
+Index (position) of start state in the matrix (i.e., the second character)
 }
   \item{to}{
-%%     ~~Describe \code{to} here~~
+Index (position) of end state in the matrix
 }
   \item{correct.diag}{
-%%     ~~Describe \code{correct.diag} here~~
+Normally the diagonal is the negative sum of the non-diagonal elements in a row. If TRUE, this verifies that this is so
 }
   \item{total.time}{
-%%     ~~Describe \code{total.time} here~~
-}
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
+A large enough time such that there is essentially no chance of remaining unchanged}
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+A vector with the probability of each path into the final state.
 }
 \references{
-%% ~put references to the literature/web site here ~
+Zanne et al. 2014
 }
 \author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
+Brian C. O'Meara
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 #A random sample transition matrix
 Q <- matrix(runif(9), 3, 3)
@@ -58,4 +43,5 @@ diag(Q) <- -rowSums(Q)
 colnames(Q) <- c("A", "B", "C")
 rownames(Q) <- c("A", "B", "C")
 print(Q)
-ComputePathwayProbability(Q)
+ComputePathwayProbability(Q, from=1, to=3)
+}

@@ -1,55 +1,36 @@
 \name{PlotBubbleMatrix}
 \alias{PlotBubbleMatrix}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-%%  ~~function to do ... ~~
+PlotBubbleMatrix
 }
 \description{
-%%  ~~ A concise (1-5 lines) description of what the function does. ~~
+Plots a rate matrix such that circle area correlates with the rate
 }
 \usage{
 PlotBubbleMatrix(Q, main = "", special = Inf, cex = 1)
 }
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{Q}{
-%%     ~~Describe \code{Q} here~~
+Instantaneous rate matrix
 }
   \item{main}{
-%%     ~~Describe \code{main} here~~
+Optional plot title
 }
   \item{special}{
-%%     ~~Describe \code{special} here~~
+If you want to highlight a particular element, input its number here
 }
   \item{cex}{
-%%     ~~Describe \code{cex} here~~
+Adjustment for text size
 }
-}
-\details{
-%%  ~~ If necessary, more details than the description above ~~
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+None
 }
-\references{
-%% ~put references to the literature/web site here ~
-}
+
 \author{
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
+Brian C. O'Meara
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 #A random sample transition matrix
 Q <- matrix(runif(9), 3, 3)
@@ -59,3 +40,4 @@ colnames(Q) <- c("A", "B", "C")
 rownames(Q) <- c("A", "B", "C")
 print(Q)
 PlotBubbleMatrix(Q)
+}
