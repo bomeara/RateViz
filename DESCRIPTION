@@ -1,0 +1,10 @@
+Package: RateViz
+Type: Package
+Title: Visualizations for instantaneous rate matrices
+Version: 1.0
+Date: 2015-02-17
+Author: Brian C. O'Meara and Jeremy M. Beaulieu
+Maintainer: Brian C. O'Meara <omeara.brian@gmail.com>
+Description: This package uses an instantaneous rate matrix (such as is used for models of DNA evolution, morphological character change over evolutionary history, and other areas) and summarizes it in various ways. These could include bubble plots, a network showing transitions, or calculations to figure out likely paths between two states.
+Imports: expm, miscTools, igraph
+License: GPL (>= 2)
