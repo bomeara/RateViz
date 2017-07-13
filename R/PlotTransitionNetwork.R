@@ -1,6 +1,7 @@
 PlotTransitionNetwork <-
 function(Q, main="", layout.fn = layout.circle, ...) {
 	diag(Q) <- 0
+	Q[which(is.na(Q))] <- 0
 	Q<-Q/max(Q)
 	g <- graph.adjacency(Q, weighted=TRUE, mode="directed")
 	g.layout <- layout.fn(g)

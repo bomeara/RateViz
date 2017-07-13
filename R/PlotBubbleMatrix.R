@@ -1,6 +1,7 @@
 PlotBubbleMatrix <-
 function(Q, main="", special=Inf, cex=1){
 diag(Q) <- 0
+Q[which(is.na(Q))] <- 0
 	Q<-Q/max(Q)
 
   plot(x=range(.5,.5+dim(Q)[2]),y=-range(.5, .5+dim(Q)[1]), xlab="", ylab="", type="n", main=main,xaxt='n',yaxt='n', asp=1,bty="n")
